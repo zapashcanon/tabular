@@ -1,6 +1,6 @@
 (library
- (name ppx_tabular)
- (public_name tabular.ppx)
+ (name tabular_ppx)
  (kind ppx_rewriter)
  (libraries core_kernel ppxlib)
- (preprocess (pps ppxlib.metaquot ppxlib.runner)))
+ (preprocess
+  (pps ppxlib.metaquot ppxlib.runner)))

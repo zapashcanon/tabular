@@ -1,4 +1,4 @@
 (library
  (name ppx_tabular_test)
  (preprocess
-  (pps ppx_tabular)))
+  (pps tabular_ppx)))

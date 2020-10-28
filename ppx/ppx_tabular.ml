@@ -26,7 +26,7 @@ module Struct = struct
       let fields = [%e elist ~loc (List.map tsig.fields ~f:(fun fld -> estring ~loc fld.field_name))]
     ] in
     module_binding ~loc
-      ~name:(Located.mk ~loc "Row")
+      ~name:(Located.mk ~loc (Some "Row"))
       ~expr:(pmod_structure ~loc contents)
 
   let generator ~loc tsig = [
@@ -40,7 +40,7 @@ module Sig = struct
       [%sig: type nonrec t = t val fields : string list]
     in
     module_declaration ~loc
-      ~name:(Located.mk ~loc "Row")
+      ~name:(Located.mk ~loc (Some "Row"))
       ~type_:(pmty_signature ~loc contents)
 
   let generator ~loc tsig = [
